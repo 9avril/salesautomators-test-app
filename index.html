@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modal Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="modal">
+    <div class="modal-header">
+        NEW Create a job
+    </div>
+    <div class="modal-body">
+        <form id="jobForm">
+            <div class="form-row">
+                <div class="form-section client-details">
+                    <p class="section-name">Client details</p>
+                    <div class="input-row">
+                        <input type="text" placeholder="First name">
+                        <input type="text" placeholder="Last name">
+                    </div>
+                    <input type="tel" placeholder="Phone">
+                    <input type="email" placeholder="Email (optional)">
+                </div>
+                <div class="form-section job-details">
+                    <p class="section-name">Job details</p>
+                    <div class="input-row">
+                        <select class="select-class">
+                            <option>Job type</option>
+                        </select>
+                        <select class="select-class">
+                            <option>Job source</option>
+                        </select>
+                    </div>
+                    <textarea placeholder="Job description (optional)"></textarea>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-section service-location">
+                    <p class="section-name">Service location</p>
+                    <input type="text" placeholder="Address">
+                    <input type="text" placeholder="City">
+                    <input type="text" placeholder="State">
+                    <div class="input-row">
+                        <input type="text" placeholder="Zip code">
+                        <select name="area" id="area-select">
+                            <option value="">Area</option>
+                            <option value="area1">Область 1</option>
+                            <option value="area2">Область 2</option>
+                            <option value="area3">Область 3</option>
+                        </select>
+
+                    </div>
+                </div>
+                <div class="form-section scheduled">
+                    <p class="section-name">Scheduled</p>
+                    <input type="date" placeholder="Start date">
+                    <div class="input-row">
+                        <input type="time" placeholder="Start time">
+                        <input type="time" placeholder="End time">
+                    </div>
+                    <select>
+                        <option>Test select</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="create-job">Create job</button>
+                <button type="button" class="save-info">Save info</button>
+            </div>
+        </form>
+    </div>
+</div>
