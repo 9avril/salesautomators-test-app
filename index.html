@@ -20,11 +20,11 @@
                 <div class="form-section client-details">
                     <p class="section-name">Client details</p>
                     <div class="input-row">
-                        <input type="text" placeholder="First name">
-                        <input type="text" placeholder="Last name">
+                        <input type="text" id="firstName" placeholder="First name">
+                        <input type="text" id="lastName" placeholder="Last name">
                     </div>
-                    <input type="tel" placeholder="Phone">
-                    <input type="email" placeholder="Email (optional)">
+                    <input type="tel" id="phone" placeholder="Phone">
+                    <input type="email" id="email" placeholder="Email (optional)" optional>
                 </div>
                 <div class="form-section job-details">
                     <p class="section-name">Job details</p>
@@ -42,7 +42,7 @@
             <div class="form-row">
                 <div class="form-section service-location">
                     <p class="section-name">Service location</p>
-                    <input type="text" placeholder="Address">
+                    <input type="text" id="address" placeholder="Address">
                     <input type="text" placeholder="City">
                     <input type="text" placeholder="State">
                     <div class="input-row">
@@ -75,9 +75,12 @@
                 </div>
             </div>
             <div class="form-actions">
-                <button type="submit" class="create-job">Create job</button>
+                <button type="submit" id="create-job" class="create-job">Create job</button>
                 <button type="button" class="save-info">Save info</button>
             </div>
         </form>
     </div>
 </div>
+<script src="form-validator.js"></script>
+<script src="addJob.js"></script>
+</body>

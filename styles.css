@@ -126,6 +126,18 @@ button.create-job, button.save-info {
     cursor: pointer;
 }
 
+input.highlight {
+    border: 2px solid red;
+}
+
+/* Стили для отображения сообщения о валидации */
+input:invalid:focus:after {
+    content: attr(data-validation-message);
+    color: red;
+    position: absolute;
+}
+
+
 @media (max-width: 768px) {
     .modal {
         width: 90%;
