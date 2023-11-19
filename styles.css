@@ -55,8 +55,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
-    /* Уменьшаем gap или удаляем его */
-    gap: 20px; /* Пример меньшего значения для gap */
+    gap: 20px;
 }
 
 .section-name {
@@ -68,7 +67,7 @@
     margin-top: 0;
 }
 
-/* Обновляем глобальные стили для элементов формы */
+
 input, select, textarea, time {
     box-sizing: border-box;
     padding: 10px;
@@ -79,17 +78,17 @@ input, select, textarea, time {
 
 .input-row {
     display: flex;
-    gap: 10px; /* Сохраняем отступ между элементами */
+    gap: 10px;
 }
 
 .input-row > * {
-    flex: 1; /* Разрешаем элементам занимать доступное пространство */
+    flex: 1;
     box-sizing: border-box;
-    margin-right: 10px; /* Устанавливаем отступ справа для всех элементов, кроме последнего */
+    margin-right: 10px;
 }
 
 .input-row > *:last-child {
-    margin-right: 0; /* Убираем отступ для последнего элемента */
+    margin-right: 0;
 }
 
 button {
@@ -114,9 +113,29 @@ button.create-job, button.save-info {
     color: white;
 }
 
+.select-style {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    appearance: none;
+    background-image: url('icons/down-arrow.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    width: 100%;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .modal {
-        width: 95%;
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .form-row,
+    .input-row {
+        flex-direction: column;
+        gap: 0;
     }
 
     .form-section {
@@ -124,7 +143,19 @@ button.create-job, button.save-info {
         margin-bottom: 20px;
     }
 
+    .input-row > * {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
     .form-actions {
         flex-direction: column;
+        align-items: stretch;
+    }
+
+    button.create-job,
+    button.save-info {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }

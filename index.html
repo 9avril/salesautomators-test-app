@@ -29,10 +29,10 @@
                 <div class="form-section job-details">
                     <p class="section-name">Job details</p>
                     <div class="input-row">
-                        <select class="select-class">
+                        <select class="select-style">
                             <option>Job type</option>
                         </select>
-                        <select class="select-class">
+                        <select class="select-style">
                             <option>Job source</option>
                         </select>
                     </div>
@@ -47,7 +47,7 @@
                     <input type="text" placeholder="State">
                     <div class="input-row">
                         <input type="text" placeholder="Zip code">
-                        <select name="area" id="area-select">
+                        <select name="area" id="area-select" class="select-style">
                             <option value="">Area</option>
                             <option value="area1">Область 1</option>
                             <option value="area2">Область 2</option>
@@ -58,12 +58,18 @@
                 </div>
                 <div class="form-section scheduled">
                     <p class="section-name">Scheduled</p>
-                    <input type="date" placeholder="Start date">
-                    <div class="input-row">
-                        <input type="time" placeholder="Start time">
-                        <input type="time" placeholder="End time">
+                    <div class=" input-row date-input-container">
+                        <input class="date-input" type="text" placeholder="Start date" onfocus="(this.type='date')"
+                               onblur="(this.type='text')">
                     </div>
-                    <select>
+                    <div class=" input-row time-input-container">
+                        <input class="time-input" type="text" placeholder="Start time" onfocus="(this.type='time')"
+                               onblur="(this.type='text')">
+                        <input class="time-input" type="text" placeholder="End time" onfocus="(this.type='time')"
+                               onblur="(this.type='text')">
+                    </div>
+
+                    <select class="select-style">
                         <option>Test select</option>
                     </select>
                 </div>
