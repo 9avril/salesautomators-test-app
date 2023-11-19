@@ -137,7 +137,6 @@ input:invalid:focus:after {
     position: absolute;
 }
 
-
 @media (max-width: 768px) {
     .modal {
         width: 90%;

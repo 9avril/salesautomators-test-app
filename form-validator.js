@@ -28,14 +28,25 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     createJobButton.addEventListener('click', (event) => {
-        event.preventDefault();
+        event.preventDefault()
         if (checkInputsValidity()) {
             const formData = {
                 firstName: document.getElementById('firstName').value,
                 lastName: document.getElementById('lastName').value,
-                phone: document.getElementById('phone').value,
+                Phone: document.getElementById('phone').value,
                 email: document.getElementById('email').value,
-                address: document.getElementById('address').value
+                address: document.getElementById('address').value,
+                city: document.getElementById('city').value,
+                state: document.getElementById('state').value,
+                zipCode: document.getElementById('zip_code').value,
+                area: document.getElementById('area-select').value,
+                jobType: document.getElementById('job_type').value,
+                jobSource: document.getElementById('job_source').value,
+                jobDesc: document.getElementById('job_description').value,
+                startDate: document.getElementById('start_date').value,
+                startTime: document.getElementById('start_time').value,
+                endTime: document.getElementById('end_time').value,
+                Technician: document.getElementById('select_tech').value
             };
 
             createPipedriveDeal(formData);

@@ -29,24 +29,26 @@
                 <div class="form-section job-details">
                     <p class="section-name">Job details</p>
                     <div class="input-row">
-                        <select class="select-style">
+                        <select id="job_type" class="select-style">
                             <option>Job type</option>
+                            <option>Recall Job</option>
                         </select>
-                        <select class="select-style">
+                        <select id="job_source" class="select-style">
                             <option>Job source</option>
+                            <option>GL Pinellas</option>
                         </select>
                     </div>
-                    <textarea placeholder="Job description (optional)"></textarea>
+                    <textarea id="job_description" placeholder="Job description (optional)"></textarea>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-section service-location">
                     <p class="section-name">Service location</p>
                     <input type="text" id="address" placeholder="Address">
-                    <input type="text" placeholder="City">
-                    <input type="text" placeholder="State">
+                    <input type="text" id="city" placeholder="City">
+                    <input type="text" id="state" placeholder="State">
                     <div class="input-row">
-                        <input type="text" placeholder="Zip code">
+                        <input type="text" id="zip_code" placeholder="Zip code">
                         <select name="area" id="area-select" class="select-style">
                             <option value="">Area</option>
                             <option value="area1">Область 1</option>
@@ -59,18 +61,22 @@
                 <div class="form-section scheduled">
                     <p class="section-name">Scheduled</p>
                     <div class=" input-row date-input-container">
-                        <input class="date-input" type="text" placeholder="Start date" onfocus="(this.type='date')"
+                        <input id="start_date" class="date-input" type="text" placeholder="Start date"
+                               onfocus="(this.type='date')"
                                onblur="(this.type='text')">
                     </div>
                     <div class=" input-row time-input-container">
-                        <input class="time-input" type="text" placeholder="Start time" onfocus="(this.type='time')"
+                        <input id="start_time" class="time-input" type="text" placeholder="Start time"
+                               onfocus="(this.type='time')"
                                onblur="(this.type='text')">
-                        <input class="time-input" type="text" placeholder="End time" onfocus="(this.type='time')"
+                        <input id="end_time" class="time-input" type="text" placeholder="End time"
+                               onfocus="(this.type='time')"
                                onblur="(this.type='text')">
                     </div>
 
-                    <select class="select-style">
-                        <option>Test select</option>
+                    <select id="select_tech" class="select-style">
+                        <option>Select technician</option>
+                        <option>Kiyashko Artsiom</option>
                     </select>
                 </div>
             </div>
