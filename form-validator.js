@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isInputValid = input => {
         if (input.value.trim() === '') {
             if (input.hasAttribute('optional')) {
-                return true; // Пропускаем проверку для необязательных полей
+                return true;
             }
             addHighlight(input);
             setCustomValidityMessage(input, 'Please fill out this field');
@@ -28,28 +28,29 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     createJobButton.addEventListener('click', (event) => {
-        event.preventDefault()
+        event.preventDefault();
         if (checkInputsValidity()) {
+            const getVal = id => document.getElementById(id).value;
             const formData = {
-                firstName: document.getElementById('firstName').value,
-                lastName: document.getElementById('lastName').value,
-                Phone: document.getElementById('phone').value,
-                email: document.getElementById('email').value,
-                address: document.getElementById('address').value,
-                city: document.getElementById('city').value,
-                state: document.getElementById('state').value,
-                zipCode: document.getElementById('zip_code').value,
-                area: document.getElementById('area-select').value,
-                jobType: document.getElementById('job_type').value,
-                jobSource: document.getElementById('job_source').value,
-                jobDesc: document.getElementById('job_description').value,
-                startDate: document.getElementById('start_date').value,
-                startTime: document.getElementById('start_time').value,
-                endTime: document.getElementById('end_time').value,
-                Technician: document.getElementById('select_tech').value
+                firstName: getVal('firstName'),
+                lastName: getVal('lastName'),
+                Phone: getVal('phone'),
+                email: getVal('email'),
+                address: getVal('address'),
+                city: getVal('city'),
+                state: getVal('state'),
+                zipCode: getVal('zip_code'),
+                area: getVal('area-select'),
+                jobType: getVal('job_type'),
+                jobSource: getVal('job_source'),
+                jobDesc: getVal('job_description'),
+                startDate: getVal('start_date'),
+                startTime: getVal('start_time'),
+                endTime: getVal('end_time'),
+                Technician: getVal('select_tech')
             };
-
             createPipedriveDeal(formData);
         }
     });
+
 });
